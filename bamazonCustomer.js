@@ -81,6 +81,7 @@ function checkInventory() {
         //if we don't have enought in stock, tell user we don't have enough
         if (results[0].ounces_in_stock < ozRequested) {
             console.log("I'm sorry we only have " + results[0].ounces_in_stock + " ounces left in stock!");
+            connection.end();
         }
         //else fulfill order
         else {
